@@ -81,20 +81,17 @@ const schedule: ScheduleItem[] = [
 const whyJoinItems: WhyJoinItem[] = [
   {
     title: "Expert Mentors",
-    description: "🔹 Expert Mentors
-      Learn from industry professionals with real-world experience in Python and Data Science.",
+    description: "🔹 Expert Mentors Learn from industry professionals with real-world experience in Python and Data Science.",
     icon: GraduationCap
   },
   {
     title: "Hands-on Learning",
-    description: "💡 Hands-on Learning
-Work on real datasets, implement machine learning models, and gain practical skills.",
+    description: "💡 Hands-on Learning Work on real datasets, implement machine learning models, and gain practical skills.",
     icon: Lightbulb
   },
   {
     title: "Exciting Prizes",
-    description: "🏆 Exciting Challenges
-Compete in data science challenges, showcase your skills, and win exclusive rewards.",
+    description: "🏆 Exciting Challenges Compete in data science challenges, showcase your skills, and win exclusive rewards.",
     icon: Trophy
   }
 ];
