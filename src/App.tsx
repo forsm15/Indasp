@@ -7,7 +7,9 @@ import bruhatProfile from "../image/bruhat.jpg";
 import benProfile from "../image/ben.jpg";
 import ananthProfile from "../image/ananthpullur.jpg";
 import Registration from "./Registration";
+import { useNavigate } from "react-router-dom";
 
+const navigate = useNavigate();
 
 import {
   Menu,
