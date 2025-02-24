@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Mail, Linkedin } from "lucide-react";
 import sujayProfile from "../image/sujayvkulkarni.jpg";
 import adityaProfile from "../image/adityasmaller.jpg";
 import anirudhProfile from "../image/anirudh.jpg";
