@@ -113,6 +113,10 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
+  const handleRegisterClick = () => {
+    navigate('/register');
+  };
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -191,21 +195,12 @@ function App() {
                 Course Materials
               </a>
 
-              <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault(); // Prevent default anchor behavior
-                const newTab = window.open("/", "_blank"); // Open a new tab with your app's base URL
-                if (newTab) {
-                  newTab.onload = () => {
-                    newTab.location.href = "/Registration"; // Change the URL after the new tab loads
-                  };
-                }
-              }}
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-            >
-              Register Here
-            </a>
+              <button
+                onClick={handleRegisterClick}
+                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+              >
+                Register Here
+              </button>
             </div>
 
             {/* Mobile menu button */}
@@ -268,21 +263,12 @@ function App() {
               >
                 Course Materials
               </a>
-             <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault(); // Prevent default anchor behavior
-                const newTab = window.open("/", "_blank"); // Open a new tab with your app's base URL
-                if (newTab) {
-                  newTab.onload = () => {
-                    newTab.location.href = "/Registration"; // Change the URL after the new tab loads
-                  };
-                }
-              }}
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-            >
-              Register Here
-            </a>
+             <button
+                onClick={handleRegisterClick}
+                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+              >
+                Register Here
+              </button>
             </div>
           </div>
         )}
@@ -299,21 +285,12 @@ function App() {
             <p className="text-xl md:text-2xl mb-12 animate-fade-in-delay">
               Learn. Analyze. Predict. Elevate Your Skills with Python!
             </p>
-            <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault(); // Prevent default anchor behavior
-                const newTab = window.open("/", "_blank"); // Open a new tab with your app's base URL
-                if (newTab) {
-                  newTab.onload = () => {
-                    newTab.location.href = "/Registration"; // Change the URL after the new tab loads
-                  };
-                }
-              }}
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-            >
-              Register Now
-            </a>
+            <button
+                onClick={handleRegisterClick}
+                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+              >
+                Register Now
+              </button>
           </div>
         </section>
 
