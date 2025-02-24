@@ -6,7 +6,7 @@ import anirudhProfile from "../image/anirudh.jpg";
 import bruhatProfile from "../image/bruhat.jpg";
 import benProfile from "../image/ben.jpg";
 import ananthProfile from "../image/ananthpullur.jpg";
-// import Registration from "./components/Registration";
+import Registration from "./Registration";
 
 
 import {
@@ -297,7 +297,7 @@ function App() {
             }}
             className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
           >
-            Register Here
+            Register Now
           </a>
           </div>
         </section>
