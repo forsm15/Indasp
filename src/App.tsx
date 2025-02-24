@@ -6,7 +6,7 @@ import anirudhProfile from "../image/anirudh.jpg";
 import bruhatProfile from "../image/bruhat.jpg";
 import benProfile from "../image/ben.jpg";
 import ananthProfile from "../image/ananthpullur.jpg";
-import Registration from "./components/Registration";
+// import Registration from "./components/Registration";
 
 
 import {
@@ -191,12 +191,16 @@ function App() {
                 Course Materials
               </a>
 
-              <button
-                onClick={() => (window.location.href = "/Registration")}
-                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-              >
-                Register Here
-              </button>
+              <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault(); // Prevent default anchor behavior
+                window.open('/Registration', '_blank'); // Open in a new tab
+              }}
+              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+            >
+              Register Here
+            </a>
             </div>
 
             {/* Mobile menu button */}
@@ -259,12 +263,16 @@ function App() {
               >
                 Course Materials
               </a>
-              <button
-                onClick={() => (window.location.href = "/Registration")}
-                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-              >
-                Register Here
-              </button>
+              <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault(); // Prevent default anchor behavior
+                window.open('/Registration', '_blank'); // Open in a new tab
+              }}
+              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+            >
+              Register Here
+            </a>
             </div>
           </div>
         )}
@@ -281,12 +289,16 @@ function App() {
             <p className="text-xl md:text-2xl mb-12 animate-fade-in-delay">
               Learn. Analyze. Predict. Elevate Your Skills with Python!
             </p>
-            <button
-              onClick={() => (window.location.href = "/Registration")}
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-            >
-              Register Now
-            </button>
+            <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault(); // Prevent default anchor behavior
+              window.open('/Registration', '_blank'); // Open in a new tab
+            }}
+            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+          >
+            Register Here
+          </a>
           </div>
         </section>
 
