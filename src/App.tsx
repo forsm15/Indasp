@@ -114,7 +114,7 @@ function App() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const handleRegisterClick = () => {
-    navigate('/register');
+    navigate('/Registration');
   };
 
   const scrollToSection = (id: string) => {
