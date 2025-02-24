@@ -195,7 +195,12 @@ function App() {
               href="#"
               onClick={(e) => {
                 e.preventDefault(); // Prevent default anchor behavior
-                window.open('/Registration', '_blank'); // Open in a new tab
+                const newTab = window.open("/", "_blank"); // Open a new tab with your app's base URL
+                if (newTab) {
+                  newTab.onload = () => {
+                    newTab.location.href = "/Registration"; // Change the URL after the new tab loads
+                  };
+                }
               }}
               className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
             >
@@ -263,11 +268,16 @@ function App() {
               >
                 Course Materials
               </a>
-              <a
+             <a
               href="#"
               onClick={(e) => {
                 e.preventDefault(); // Prevent default anchor behavior
-                window.open('/Registration', '_blank'); // Open in a new tab
+                const newTab = window.open("/", "_blank"); // Open a new tab with your app's base URL
+                if (newTab) {
+                  newTab.onload = () => {
+                    newTab.location.href = "/Registration"; // Change the URL after the new tab loads
+                  };
+                }
               }}
               className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
             >
@@ -290,15 +300,20 @@ function App() {
               Learn. Analyze. Predict. Elevate Your Skills with Python!
             </p>
             <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault(); // Prevent default anchor behavior
-              window.open('/Registration', '_blank'); // Open in a new tab
-            }}
-            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-          >
-            Register Now
-          </a>
+              href="#"
+              onClick={(e) => {
+                e.preventDefault(); // Prevent default anchor behavior
+                const newTab = window.open("/", "_blank"); // Open a new tab with your app's base URL
+                if (newTab) {
+                  newTab.onload = () => {
+                    newTab.location.href = "/Registration"; // Change the URL after the new tab loads
+                  };
+                }
+              }}
+              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+            >
+              Register Now
+            </a>
           </div>
         </section>
 
