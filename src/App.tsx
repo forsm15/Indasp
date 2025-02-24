@@ -131,7 +131,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <img src={logo} alt="Indasp Masterclass Logo" className="h-8 w-8 object-cover rounded-full" />
+              <img src={logo} alt="Indasp Masterclass Logo" className="h-10 w-10 object-cover rounded-full" />
               <span className="ml-2 text-xl font-bold">Indasp Masterclass</span>
             </div>
 
