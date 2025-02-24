@@ -190,14 +190,12 @@ function App() {
                 Course Materials
               </a>
 
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdQ-Zvzg7NBqr8tfzHnoy3QOP0tJM8Kt48ZH7RL3Vk89KcGoQ/viewform?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => (window.location.href = "/Registration")}
                 className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
               >
                 Register Here
-              </a>
+              </button>
             </div>
 
             {/* Mobile menu button */}
@@ -260,14 +258,12 @@ function App() {
               >
                 Course Materials
               </a>
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdQ-Zvzg7NBqr8tfzHnoy3QOP0tJM8Kt48ZH7RL3Vk89KcGoQ/viewform?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block px-3 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-md"
+              <button
+                onClick={() => (window.location.href = "/Registration")}
+                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
               >
                 Register Here
-              </a>
+              </button>
             </div>
           </div>
         )}
@@ -284,14 +280,12 @@ function App() {
             <p className="text-xl md:text-2xl mb-12 animate-fade-in-delay">
               Learn. Analyze. Predict. Elevate Your Skills with Python!
             </p>
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdQ-Zvzg7NBqr8tfzHnoy3QOP0tJM8Kt48ZH7RL3Vk89KcGoQ/viewform?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors animate-bounce"
+            <button
+              onClick={() => (window.location.href = "/Registration")}
+              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
             >
               Register Now
-            </a>
+            </button>
           </div>
         </section>
 
