@@ -357,20 +357,23 @@ function App() {
                   and applied data science.
                 </p>
                 <div className="flex space-x-4">
-                  <a
-                    href="https://www.linkedin.com/in/ananth-pullur-a325471b7/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800"
-                  >
-                    <Mail className="h-6 w-6" />
-                  </a>
-                  <a
-                    href="mailto:ananthp.btech23@rvu.edu.in"
-                    className="text-blue-600 hover:text-blue-800"
-                  >
-                    <Mail className="h-6 w-6" />
-                  </a>
+                  {/* LinkedIn Icon */}
+  <a
+    href="https://www.linkedin.com/in/ananth-pullur-a325471b7/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-blue-600 hover:text-blue-800"
+  >
+    <Linkedin className="h-6 w-6" />
+  </a>
+
+  {/* Mail Icon */}
+  <a
+    href="mailto:ananthp.btech23@rvu.edu.in"
+    className="text-blue-600 hover:text-blue-800"
+  >
+    <Mail className="h-6 w-6" />
+  </a>
                 </div>
               </div>
             </div>
@@ -387,7 +390,7 @@ function App() {
               <div className="bg-white p-8 rounded-lg shadow-lg text-center">
                 <Trophy className="w-16 h-16 mx-auto mb-6 text-yellow-500" />
                 <h3 className="text-2xl font-bold mb-4">First Prize</h3>
-                <p className="text-3xl font-bold text-blue-600 mb-2">₹10000💰 WORTH</p>
+                <p className="text-3xl font-bold text-blue-600 mb-2">10000$💰 WORTH</p>
                 <p className="text-gray-600">🎓 Personal Mentorship
 🌍 Industry Connect
 🚀 Exclusive Career Fast-Track</p>
@@ -402,7 +405,7 @@ function App() {
               <div className="bg-white p-8 rounded-lg shadow-lg text-center">
                 <Trophy className="w-16 h-16 mx-auto mb-6 text-orange-500" />
                 <h3 className="text-2xl font-bold mb-4">Third Prize</h3>
-                <p className="text-3xl font-bold text-blue-600 mb-2">2500$💰 WORTH</p>
+                <p className="text-3xl font-bold text-blue-600 mb-2">250$💰 WORTH</p>
                 <p className="text-gray-600">🌍 Industry Connect</p>
               </div>
             </div>
