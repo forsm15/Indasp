@@ -1,12 +1,13 @@
 import React, { useState, useRef } from 'react';
 import { Mail, Linkedin } from "lucide-react";
+import logo from "../logo.jpg";
 import sujayProfile from "../image/sujayvkulkarni.jpg";
 import adityaProfile from "../image/adityasmaller.jpg";
 import anirudhProfile from "../image/anirudh.jpg";
 import bruhatProfile from "../image/bruhat.jpg";
 import benProfile from "../image/ben.jpg";
 import ananthProfile from "../image/ananthpullur.jpg";
-import Registration from "./Registration";
+
 
 
 import {
@@ -80,17 +81,20 @@ const schedule: ScheduleItem[] = [
 const whyJoinItems: WhyJoinItem[] = [
   {
     title: "Expert Mentors",
-    description: "Learn from seasoned professionals",
+    description: "🔹 Expert Mentors
+      Learn from industry professionals with real-world experience in Python and Data Science.",
     icon: GraduationCap
   },
   {
     title: "Hands-on Learning",
-    description: "Practical patent drafting guidance",
+    description: "💡 Hands-on Learning
+Work on real datasets, implement machine learning models, and gain practical skills.",
     icon: Lightbulb
   },
   {
     title: "Exciting Prizes",
-    description: "Win up to ₹2.1 LAKH and gain global recognition",
+    description: "🏆 Exciting Challenges
+Compete in data science challenges, showcase your skills, and win exclusive rewards.",
     icon: Trophy
   }
 ];
@@ -113,9 +117,6 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  const handleRegisterClick = () => {
-    navigate('/Registration');
-  };
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -133,7 +134,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <BookOpen className="h-8 w-8 text-blue-600" />
+              <img src={logo} alt="Indasp Masterclass Logo" className="h-8 w-8 object-cover rounded-full" />
               <span className="ml-2 text-xl font-bold">Indasp Masterclass</span>
             </div>
 
