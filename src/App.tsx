@@ -433,42 +433,41 @@ function App() {
         </section>
 
         {/* Navigate Section */}
-        <section id="navigate" className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-center mb-12">How to Reach</h2>
-            <div className="grid md:grid-cols-2 gap-12">
-              <div className="space-y-6">
-                <h3 className="text-2xl font-semibold mb-4">Location Details</h3>
-                <div className="flex items-start space-x-4">
-                  <MapPin className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="font-semibold">Workshop Venue</p>
-                    <p className="text-gray-600">
-                      RV University
-                      <br />
-                      RV Vidyanikethan Post
-                      <br />
-                      8th Mile, Mysuru Road
-                      <br />
-                      Bengaluru - 560059
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="h-96 rounded-lg overflow-hidden shadow-lg">
-                <iframe
-                  src="https://maps.app.goo.gl/zM6EuczwcTEx1YiA8"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
-            </div>
+        {/* Navigate Section */}
+<section id="navigate" className="py-20 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-4xl font-bold text-center mb-12">How to Reach</h2>
+    <div className="grid md:grid-cols-2 gap-12">
+      <div className="space-y-6">
+        <h3 className="text-2xl font-semibold mb-4">Location Details</h3>
+        <div className="flex items-start space-x-4">
+          <MapPin className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
+          <div>
+            <p className="font-semibold">Workshop Venue</p>
+            <p className="text-gray-600">
+              RV University  
+              RV Vidyanikethan Post  
+              8th Mile, Mysuru Road  
+              Bengaluru - 560059  
+            </p>
           </div>
-        </section>
+        </div>
+      </div>
+      <div className="h-96 rounded-lg overflow-hidden shadow-lg">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.638176914569!2d77.49945121482014!3d12.923494890882582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f3bb5d3c61f%3A0x8760d6c21a87e63c!2sRV%20University!5e0!3m2!1sen!2sin!4v1691228162431!5m2!1sen!2sin"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         {/* Team Section */}
         <section id="team" className="py-20 bg-white">
