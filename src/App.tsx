@@ -454,11 +454,6 @@ function App() {
 
                 {day.events.map((event, i) => (
                   <div key={i} className="mb-8 relative">
-                    {/* Dot (Centered on the line) */}
-                    <div className="absolute left-[-14px] top-2 w-5 h-5 bg-blue-500 rounded-full border-4 border-white shadow-md"></div>
-              
-                    {/* Horizontal Connector Line */}
-                    <div className="absolute left-[-7px] top-4 w-10 border-t-2 border-blue-500"></div>
 
                     {/* Time & Details */}
                     <div className="flex items-start">
