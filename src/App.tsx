@@ -332,14 +332,14 @@ function App() {
           </div>
         </section>
 
-        {/* About Workshop Section */}
+{/* About Workshop Section */}
 <section id="about" className="py-20 bg-gray-50">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
       About the Workshop
     </h2>
 
-    {/* Grid Layout for Sections */}
+    {/* Grid Layout for Main Sections */}
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {/* Why Are We Doing This? */}
       <div className="p-8 bg-white rounded-2xl shadow-lg transform hover:scale-105 transition duration-300">
@@ -405,8 +405,37 @@ function App() {
         </ul>
       </div>
     </div>
+
+    {/* Prerequisites Section */}
+    <div className="mt-16">
+      <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Prerequisites</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="p-8 bg-white rounded-2xl shadow-lg transform hover:scale-105 transition duration-300">
+          <div className="flex items-center space-x-3">
+            <Settings className="w-8 h-8 text-red-600" />
+            <h3 className="text-2xl font-semibold text-gray-800">Required Software</h3>
+          </div>
+          <ul className="mt-4 space-y-2 text-gray-600">
+            <li>🖥️ Python (Latest Version) Installed</li>
+            <li>📝 VS Code (Preferred) OR Jupyter Notebook / Anaconda</li>
+            <li>🌍 Git & GitHub Account for Project Collaboration</li>
+          </ul>
+        </div>
+
+        <div className="p-8 bg-white rounded-2xl shadow-lg transform hover:scale-105 transition duration-300">
+          <div className="flex items-center space-x-3">
+            <CheckCircle className="w-8 h-8 text-blue-600" />
+            <h3 className="text-2xl font-semibold text-gray-800">No Experience? No Problem!</h3>
+          </div>
+          <p className="text-gray-600 mt-4">
+            If you're new to these tools, don’t worry—we’ll provide a step-by-step guide before the sessions begin!
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
 
 
 
