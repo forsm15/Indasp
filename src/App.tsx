@@ -307,15 +307,15 @@ function App() {
         {/* Why Join Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-bold text-center mb-16">
+              Why Join Our Workshop?
+            </h2>
             {/* Scrolling Text Section */}
-    <div className="relative mt-10 overflow-hidden bg-gray-80 text-white py-2">
+    <div className="relative mt-10 overflow-hidden bg-gray-50 text-black py-2">
       <div className="whitespace-nowrap animate-marquee text-lg font-semibold">
         🚀 Skills get you internships! 🌟 Top 3-10 performers get industry expert guidance! 🎯Top 3 are trained for research paper!🔥Interview Opportunities!
       </div>
     </div>
-            <h2 className="text-4xl font-bold text-center mb-16">
-              Why Join Our Workshop?
-            </h2>
             <div className="grid md:grid-cols-3 gap-12">
               {whyJoinItems.map((item, index) => (
                 <div
