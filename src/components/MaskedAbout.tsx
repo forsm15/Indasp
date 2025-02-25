@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 const MaskedAbout = () => {
   const containerRef = useRef(null);
@@ -8,21 +8,32 @@ const MaskedAbout = () => {
     offset: ["start start", "end start"],
   });
 
-  // Heading moves up and fades out 3x faster than content
+  // Disable outer scrolling while inside the section
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "auto"; // Restore scrolling after exit
+    };
+  }, []);
+
+  // Heading moves 3× faster than content
   const headingY = useTransform(scrollYProgress, [0, 0.1], ["0%", "-100%"]);
   const headingOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
 
-  // Content scrolls in at normal speed
-  const contentY = useTransform(scrollYProgress, [0.3, 0.9], ["50%", "0%"]);
-  const contentOpacity = useTransform(scrollYProgress, [0.3, 0.9], [0, 1]);
+  // Content scrolls normally inside without showing scrollbar
+  const contentY = useTransform(scrollYProgress, [0.3, 1], ["50%", "0%"]);
+  const contentOpacity = useTransform(scrollYProgress, [0.3, 1], [0, 1]);
 
-  // Heading returns at the end at normal speed
+  // Heading returns at the end
   const headingReturnY = useTransform(scrollYProgress, [0.9, 1], ["100%", "0%"]);
   const headingReturnOpacity = useTransform(scrollYProgress, [0.9, 1], [0, 1]);
 
   return (
-    <div ref={containerRef} className="relative min-h-screen bg-gray-900 text-white flex flex-col justify-center items-center overflow-hidden">
-      {/* Initial Heading (Moves up 3x faster) */}
+    <div 
+      ref={containerRef} 
+      className="relative min-h-screen bg-gray-900 text-white flex flex-col justify-center items-center overflow-hidden"
+    >
+      {/* Initial Heading (Moves up 3× faster) */}
       <motion.h1 
         style={{ y: headingY, opacity: headingOpacity }}
         className="absolute top-1/2 text-5xl font-bold"
@@ -33,7 +44,7 @@ const MaskedAbout = () => {
       {/* Full Content Appearing After Split */}
       <motion.div 
         style={{ opacity: contentOpacity, y: contentY }} 
-        className="relative max-w-7xl w-full mx-auto px-6 lg:px-8"
+        className="relative max-w-7xl w-full mx-auto px-6 lg:px-8 h-screen overflow-y-scroll scrollbar-hidden"
       >
         {/* Introduction */}
         <h2 className="text-4xl font-bold text-center mb-12">
