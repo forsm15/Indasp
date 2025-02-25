@@ -443,42 +443,36 @@ function App() {
 
         {/* Schedule Section */}
         <section id="schedule" className="py-20 bg-white">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center mb-12">Event Schedule</h2>
 
-        {/* Mapping Days */}
-        {Object.entries(schedule).map(([day, events], dayIndex) => (
-          <div key={dayIndex} className="mb-12">
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">{day}</h3>
+        {/* Timeline Container */}
+        <div className="relative flex items-center justify-between">
+          {/* Horizontal Line */}
+          <div className="absolute top-8 left-0 w-full border-t-4 border-blue-500"></div>
 
-            <div className="relative border-l-4 border-blue-500 pl-8 ml-4">
-              {/* Mapping Events */}
-              {events.map((event, eventIndex) => (
-                <div
-                  key={eventIndex}
-                  className="relative mb-10 animate-fadeIn"
-                >
-                  {/* Dot Indicator */}
-                  <div className="absolute -left-5 top-3 w-4 h-4 bg-blue-500 rounded-full"></div>
+          {/* Events */}
+          {schedule.map((event, index) => (
+            <div key={index} className="relative flex flex-col items-center text-center w-1/3 px-4">
+              {/* Dot */}
+              <div className="absolute top-6 w-6 h-6 bg-blue-500 rounded-full border-4 border-white shadow-lg"></div>
 
-                  {/* Event Details */}
-                  <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-                    <div className="flex items-center mb-2">
-                      <Clock className="h-5 w-5 text-blue-600 mr-2" />
-                      <span className="font-semibold">{event.time}</span>
-                    </div>
-                    <h4 className="text-lg font-bold">{event.title}</h4>
-                    <p className="text-gray-600">{event.speaker}</p>
-                    <div className="flex items-center text-gray-500 text-sm mt-2">
-                      <MapPin className="h-4 w-4 mr-1" />
-                      <span>{event.location}</span>
-                    </div>
-                  </div>
+              {/* Event Card */}
+              <div className="bg-gray-100 p-6 rounded-lg shadow-md mt-10 w-full">
+                <div className="flex items-center justify-center mb-2 text-blue-600">
+                  <Clock className="h-5 w-5 mr-2" />
+                  <span className="font-semibold">{event.time}</span>
                 </div>
-              ))}
+                <h4 className="text-lg font-bold">{event.title}</h4>
+                <p className="text-gray-600">{event.speaker}</p>
+                <div className="flex items-center justify-center text-gray-500 text-sm mt-2">
+                  <MapPin className="h-4 w-4 mr-1" />
+                  <span>{event.location}</span>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
 
