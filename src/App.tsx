@@ -340,118 +340,110 @@ function App() {
       Introduction to Data Science with Python (InDaSP)
     </h2>
 
-    <div className="grid md:grid-cols-2 gap-12 items-center">
-      {/* Left Section - Main Content */}
-      <div>
-        <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-          Kickstart Your Data Science Journey 🚀
-        </h3>
-        <p className="text-gray-600 leading-relaxed">
-          This hands-on, 3-day workshop is designed for **first-year engineering students** 
-          and **beginners** eager to explore Data Science and gain **internship & research opportunities**.
-          It’s more than just learning Python—it’s about building real-world projects, interacting with 
-          industry experts, and setting up a strong career foundation in tech.
-        </p>
+    {/* Main Content Grid */}
+    <div className="grid md:grid-cols-2 gap-12">
+      {/* Left Content */}
+      <div className="flex flex-col gap-8">
+        {/* Kickstart Box */}
+        <div className="group relative bg-white shadow-lg rounded-xl p-6 transition-all duration-300 hover:bg-blue-500 hover:text-white">
+          <h3 className="text-2xl font-semibold text-center transition-all duration-300 group-hover:opacity-0">
+            Kickstart Your Data Science Journey 🚀
+          </h3>
+          <div className="absolute inset-0 flex items-center opacity-0 transition-all duration-300 group-hover:opacity-100 p-6">
+            <p className="leading-relaxed">
+              This hands-on, 3-day workshop is designed for <strong>first-year engineering students</strong> 
+              and <strong>beginners</strong> eager to explore Data Science and gain <strong>internship & research opportunities</strong>. 
+              Build real-world projects, interact with industry experts, and set up a strong career foundation.
+            </p>
+          </div>
+        </div>
 
-        <h3 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">
-          Why Choose RUDRA?
-        </h3>
-        <p className="text-gray-600 leading-relaxed">
-          RUDRA is not just about teaching concepts—we **create impact**. Our members have won hackathons, 
-          secured government grants, and built successful startups. Through **industry connections**, 
-          **mentorship programs**, and **real-world collaborations**, we ensure every student gets 
-          the best opportunities.
-        </p>
+        {/* RUDRA Box */}
+        <div className="group relative bg-white shadow-lg rounded-xl p-6 transition-all duration-300 hover:bg-blue-500 hover:text-white">
+          <h3 className="text-2xl font-semibold text-center transition-all duration-300 group-hover:opacity-0">
+            Why Choose RUDRA?
+          </h3>
+          <div className="absolute inset-0 flex items-center opacity-0 transition-all duration-300 group-hover:opacity-100 p-6">
+            <p className="leading-relaxed">
+              RUDRA is not just about teaching concepts—we <strong>create impact</strong>. Our members have won hackathons, 
+              secured government grants, and built successful startups. Through <strong>industry connections</strong>, 
+              <strong>mentorship programs</strong>, and <strong>real-world collaborations</strong>, we ensure every student gets 
+              the best opportunities.
+            </p>
+          </div>
+        </div>
       </div>
 
-      {/* Right Section - Key Highlights */}
-      <div className="bg-white shadow-lg rounded-xl p-6">
-        <h3 className="text-xl font-semibold text-gray-800 mb-4">
-          Workshop Highlights 🌟
-        </h3>
-        <ul className="text-gray-600 space-y-3">
-          <li className="flex items-start">
-            <span className="text-blue-500 text-lg mr-2">✔️</span>
-            **Master Python Fundamentals** – Learn key programming concepts, data structures, and libraries.
-          </li>
-          <li className="flex items-start">
-            <span className="text-blue-500 text-lg mr-2">📊</span>
-            **Data Analysis & Visualization** – Work on real datasets with Pandas, NumPy & Matplotlib.
-          </li>
-          <li className="flex items-start">
-            <span className="text-blue-500 text-lg mr-2">💻</span>
-            **Web Deployment with Flask** – Build & deploy projects to showcase on your resume.
-          </li>
-          <li className="flex items-start">
-            <span className="text-blue-500 text-lg mr-2">🛠️</span>
-            **GitHub & Version Control** – Learn collaboration techniques used in the industry.
-          </li>
-          <li className="flex items-start">
-            <span className="text-blue-500 text-lg mr-2">📄</span>
-            **Internship & Career Preparation** – Gain insights into networking, research papers & job interviews.
-          </li>
-        </ul>
+      {/* Right Content */}
+      <div className="flex flex-col gap-8">
+        {/* Highlights Box */}
+        <div className="group relative bg-white shadow-lg rounded-xl p-6 transition-all duration-300 hover:bg-blue-500 hover:text-white">
+          <h3 className="text-2xl font-semibold text-center transition-all duration-300 group-hover:opacity-0">
+            Workshop Highlights 🌟
+          </h3>
+          <div className="absolute inset-0 flex items-center opacity-0 transition-all duration-300 group-hover:opacity-100 p-6">
+            <ul className="space-y-3">
+              <li>✔️ <strong>Master Python Fundamentals</strong> – Learn key programming concepts, data structures, and libraries.</li>
+              <li>📊 <strong>Data Analysis & Visualization</strong> – Work on real datasets with Pandas, NumPy & Matplotlib.</li>
+              <li>💻 <strong>Web Deployment with Flask</strong> – Build & deploy projects to showcase on your resume.</li>
+              <li>🛠️ <strong>GitHub & Version Control</strong> – Learn collaboration techniques used in the industry.</li>
+              <li>📄 <strong>Internship & Career Preparation</strong> – Gain insights into networking, research papers & job interviews.</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Achievements Box */}
+        <div className="group relative bg-white shadow-lg rounded-xl p-6 transition-all duration-300 hover:bg-blue-500 hover:text-white">
+          <h3 className="text-2xl font-semibold text-center transition-all duration-300 group-hover:opacity-0">
+            RUDRA's Achievements in 1 Year 🏆
+          </h3>
+          <div className="absolute inset-0 flex items-center opacity-0 transition-all duration-300 group-hover:opacity-100 p-6">
+            <ul className="space-y-3">
+              <li>📌 Hosted 2 major Ideathons with <strong>250+ participants</strong> solving real-world challenges.</li>
+              <li>🔗 Built partnerships with <strong>SriAranea, Prosidhhi, and top startups</strong> creating hiring pipelines.</li>
+              <li>👨‍🏫 Industry mentorship from <strong>Unisys, Cisco, Goldman Sachs & Cryptic Minds</strong>.</li>
+              <li>📈 Over <strong>500+ students trained</strong>, with <strong>30% securing internships & research collaborations</strong>.</li>
+              <li>🏆 Projects winning <strong>hackathons, government grants, and transforming into startups</strong>.</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
 
-    {/* Second Section - Achievements & Prizes */}
+    {/* Prizes & Prerequisites Section */}
     <div className="mt-16 grid md:grid-cols-2 gap-12">
-      {/* Achievements */}
-      <div className="bg-white shadow-lg rounded-xl p-6">
-        <h3 className="text-xl font-semibold text-gray-800 mb-4">
-          RUDRA's Achievements in 1 Year 🏆
-        </h3>
-        <ul className="text-gray-600 space-y-3">
-          <li>📌 Hosted 2 major Ideathons with **250+ participants** solving real-world challenges.</li>
-          <li>🔗 Built partnerships with **SriAranea, Prosidhhi, and top startups** creating hiring pipelines.</li>
-          <li>👨‍🏫 Industry mentorship from **Unisys, Cisco, Goldman Sachs & Cryptic Minds**.</li>
-          <li>📈 Over **500+ students trained**, with **30% securing internships & research collaborations**.</li>
-          <li>🏆 Projects winning **hackathons, government grants, and transforming into startups**.</li>
-        </ul>
-      </div>
-
-      {/* Prizes & Recognition */}
-      <div className="bg-gray-100 shadow-lg rounded-xl p-6">
-        <h3 className="text-xl font-semibold text-gray-800 mb-4">
+      {/* Prizes Box */}
+      <div className="group relative bg-gray-100 shadow-lg rounded-xl p-6 transition-all duration-300 hover:bg-blue-500 hover:text-white">
+        <h3 className="text-2xl font-semibold text-center transition-all duration-300 group-hover:opacity-0">
           Prizes & Recognition 🎁
         </h3>
-        <ul className="text-gray-600 space-y-3">
-          <li>🏅 **Top 3-10 performers** get direct mentorship from industry experts.</li>
-          <li>📄 **Top 3 participants** receive **special research & job interview training**.</li>
-          <li>🎖️ Certificates for all participants as proof of skills.</li>
-          <li>🎁 **Exciting rewards** for outstanding contributions!</li>
-        </ul>
+        <div className="absolute inset-0 flex items-center opacity-0 transition-all duration-300 group-hover:opacity-100 p-6">
+          <ul className="space-y-3">
+            <li>🏅 <strong>Top 3-10 performers</strong> get direct mentorship from industry experts.</li>
+            <li>📄 <strong>Top 3 participants</strong> receive <strong>special research & job interview training</strong>.</li>
+            <li>🎖️ Certificates for all participants as proof of skills.</li>
+            <li>🎁 <strong>Exciting rewards</strong> for outstanding contributions!</li>
+          </ul>
+        </div>
       </div>
-    </div>
 
-    {/* Prerequisites Section */}
-    <div className="mt-16 text-center">
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-        Prerequisites 🛠️
-      </h3>
-      <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
-        To get the most out of the workshop, please ensure you have:
-      </p>
-      <div className="mt-6 flex flex-wrap justify-center gap-6">
-        <div className="bg-white shadow-md p-4 rounded-lg w-48 text-center">
-          <span className="text-blue-500 text-lg">🐍</span>
-          <p className="text-gray-700 mt-2">Python (Latest Version)</p>
-        </div>
-        <div className="bg-white shadow-md p-4 rounded-lg w-48 text-center">
-          <span className="text-blue-500 text-lg">🖥️</span>
-          <p className="text-gray-700 mt-2">VS Code / Jupyter Notebook</p>
-        </div>
-        <div className="bg-white shadow-md p-4 rounded-lg w-48 text-center">
-          <span className="text-blue-500 text-lg">🔗</span>
-          <p className="text-gray-700 mt-2">Git & GitHub Account</p>
+      {/* Prerequisites Box */}
+      <div className="group relative bg-gray-100 shadow-lg rounded-xl p-6 transition-all duration-300 hover:bg-blue-500 hover:text-white">
+        <h3 className="text-2xl font-semibold text-center transition-all duration-300 group-hover:opacity-0">
+          Prerequisites 🛠️
+        </h3>
+        <div className="absolute inset-0 flex items-center opacity-0 transition-all duration-300 group-hover:opacity-100 p-6">
+          <ul className="space-y-3">
+            <li>🐍 <strong>Python (Latest Version)</strong></li>
+            <li>🖥️ <strong>VS Code / Jupyter Notebook</strong></li>
+            <li>🔗 <strong>Git & GitHub Account</strong></li>
+          </ul>
         </div>
       </div>
-      <p className="text-gray-500 mt-4">
-        *(New to these tools? No worries! We’ll provide a step-by-step guide before the sessions.)*
-      </p>
     </div>
   </div>
 </section>
+
 
 
 
