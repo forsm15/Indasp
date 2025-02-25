@@ -59,26 +59,26 @@ const teamMembers: TeamMember[] = [
 
 const eventDays = [
   {
-    day: "Day 1",
+    day: "Day 1-28th Feb",
     events: [
-      { time: "09:00 AM", title: "Opening Keynote", speaker: "Dr. Sarah Wilson", location: "Main Hall" },
-      { time: "10:30 AM", title: "Patent Drafting Workshop", speaker: "Prof. James Anderson", location: "Workshop Room A" }
+      { time: "02:00 to 03:00 PM", title: "Slot 1", speaker: "Ananth Pullur", location: "Satyajit Ray Hall" },
+      { time: "03:10 to 05:30 PM", title: "Slot 2", speaker: "Ananth Pullur", location: "Workshop Room A" }
     ]
   },
   {
-    day: "Day 2",
+    day: "Day 2-1st March",
     events: [
-      { time: "09:00 AM", title: "Tech Trends", speaker: "Elon Reed", location: "Auditorium" },
-      { time: "11:00 AM", title: "Networking Session", speaker: "Industry Experts", location: "Lobby" },
-      { time: "01:30 PM", title: "AI & Ethics", speaker: "Dr. Alice Brown", location: "Room B" },
-      { time: "03:00 PM", title: "Panel Discussion", speaker: "Various Leaders", location: "Conference Hall" }
+      { time: "08:45 to 10:30 AM", title: "Slot 3", speaker: "Ananth Pullur", location: "Satyajit Ray Hall" },
+      { time: "11:00 to 1:30 PM", title: "Slot 4", speaker: "Industry Experts", location: "Satyajit Ray Hall" },
+      { time: "02:30 to 4:30 PM", title: "Slot 5", speaker: "Ananth Pullur", location: "Satyajit Ray Hall" },
+      { time: "04:45 to 6:30 PM", title: "Slot 6", speaker: "Various Leaders", location: "Satyajit Ray Hall" }
     ]
   },
   {
-    day: "Day 3",
+    day: "Day 3-7th March",
     events: [
-      { time: "10:00 AM", title: "Startup Pitching", speaker: "Investor Panel", location: "Main Hall" },
-      { time: "02:00 PM", title: "Closing Remarks", speaker: "Dr. Sarah Wilson", location: "Auditorium" }
+      { time: "02:00 to 03:00 PM", title: "Project Presentation", speaker: "Guest Panel", location: "Satyajit Ray Hall" },
+      { time: "05:00 PM", title: "Final Awards", speaker: "Ananth Pullur", location: "Satyajit Ray Hall" }
     ]
   }
 ];
