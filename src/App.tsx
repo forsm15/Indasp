@@ -336,106 +336,119 @@ function App() {
         {/* About Workshop Section */}
 <section id="about" className="py-20 bg-gray-50">
   <div className="max-w-7xl mx-auto px-6 lg:px-8">
-    <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
-      Introduction to Data Science with Python 🚀
+    <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
+      Introduction to Data Science with Python (InDaSP)
     </h2>
 
-    {/* Introduction */}
-    <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto leading-relaxed">
-      A power-packed, hands-on experience designed for first-year engineering students and beginners 
-      who want to kickstart their Data Science journey and land internship & research opportunities.
-      This workshop is your gateway to real-world projects, industry interactions, and building a career in tech.
-    </p>
+    <div className="grid md:grid-cols-2 gap-12 items-center">
+      {/* Left Section - Main Content */}
+      <div>
+        <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+          Kickstart Your Data Science Journey 🚀
+        </h3>
+        <p className="text-gray-600 leading-relaxed">
+          This hands-on, 3-day workshop is designed for **first-year engineering students** 
+          and **beginners** eager to explore Data Science and gain **internship & research opportunities**.
+          It’s more than just learning Python—it’s about building real-world projects, interacting with 
+          industry experts, and setting up a strong career foundation in tech.
+        </p>
 
-    {/* About RUDRA */}
-    <div className="mt-12">
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4">Why Are We Doing This?</h3>
-      <p className="text-gray-700 leading-relaxed">
-        RUDRA was established just a year ago, but we’ve already made a massive impact in the Data Science and Tech community.
-      </p>
-      
+        <h3 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">
+          Why Choose RUDRA?
+        </h3>
+        <p className="text-gray-600 leading-relaxed">
+          RUDRA is not just about teaching concepts—we **create impact**. Our members have won hackathons, 
+          secured government grants, and built successful startups. Through **industry connections**, 
+          **mentorship programs**, and **real-world collaborations**, we ensure every student gets 
+          the best opportunities.
+        </p>
+      </div>
+
+      {/* Right Section - Key Highlights */}
+      <div className="bg-white shadow-lg rounded-xl p-6">
+        <h3 className="text-xl font-semibold text-gray-800 mb-4">
+          Workshop Highlights 🌟
+        </h3>
+        <ul className="text-gray-600 space-y-3">
+          <li className="flex items-start">
+            <span className="text-blue-500 text-lg mr-2">✔️</span>
+            **Master Python Fundamentals** – Learn key programming concepts, data structures, and libraries.
+          </li>
+          <li className="flex items-start">
+            <span className="text-blue-500 text-lg mr-2">📊</span>
+            **Data Analysis & Visualization** – Work on real datasets with Pandas, NumPy & Matplotlib.
+          </li>
+          <li className="flex items-start">
+            <span className="text-blue-500 text-lg mr-2">💻</span>
+            **Web Deployment with Flask** – Build & deploy projects to showcase on your resume.
+          </li>
+          <li className="flex items-start">
+            <span className="text-blue-500 text-lg mr-2">🛠️</span>
+            **GitHub & Version Control** – Learn collaboration techniques used in the industry.
+          </li>
+          <li className="flex items-start">
+            <span className="text-blue-500 text-lg mr-2">📄</span>
+            **Internship & Career Preparation** – Gain insights into networking, research papers & job interviews.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    {/* Second Section - Achievements & Prizes */}
+    <div className="mt-16 grid md:grid-cols-2 gap-12">
       {/* Achievements */}
-      <ul className="list-disc list-inside mt-4 space-y-2 text-gray-700">
-        <li>🎯 Organized two major Ideathons with Chiptech & CyberSec Clubs at RVU, attracting 250+ participants.</li>
-        <li>🤝 Built partnerships with top startups & companies like SriAranea, Prosidhhi, and others.</li>
-        <li>🎙 Hosted industry professionals from Unisys, Cryptic Minds, Sapient, Goldman Sachs, Cisco.</li>
-        <li>📈 Over <span className="font-semibold">500+ students</span> have participated, with 30% securing internships or research collaborations.</li>
-        <li>🏆 Projects have won hackathons, received government grants, and turned into startups.</li>
-      </ul>
+      <div className="bg-white shadow-lg rounded-xl p-6">
+        <h3 className="text-xl font-semibold text-gray-800 mb-4">
+          RUDRA's Achievements in 1 Year 🏆
+        </h3>
+        <ul className="text-gray-600 space-y-3">
+          <li>📌 Hosted 2 major Ideathons with **250+ participants** solving real-world challenges.</li>
+          <li>🔗 Built partnerships with **SriAranea, Prosidhhi, and top startups** creating hiring pipelines.</li>
+          <li>👨‍🏫 Industry mentorship from **Unisys, Cisco, Goldman Sachs & Cryptic Minds**.</li>
+          <li>📈 Over **500+ students trained**, with **30% securing internships & research collaborations**.</li>
+          <li>🏆 Projects winning **hackathons, government grants, and transforming into startups**.</li>
+        </ul>
+      </div>
+
+      {/* Prizes & Recognition */}
+      <div className="bg-gray-100 shadow-lg rounded-xl p-6">
+        <h3 className="text-xl font-semibold text-gray-800 mb-4">
+          Prizes & Recognition 🎁
+        </h3>
+        <ul className="text-gray-600 space-y-3">
+          <li>🏅 **Top 3-10 performers** get direct mentorship from industry experts.</li>
+          <li>📄 **Top 3 participants** receive **special research & job interview training**.</li>
+          <li>🎖️ Certificates for all participants as proof of skills.</li>
+          <li>🎁 **Exciting rewards** for outstanding contributions!</li>
+        </ul>
+      </div>
     </div>
 
-    {/* What You’ll Learn */}
-    <div className="mt-12">
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4">What You’ll Learn 📚</h3>
-      <ul className="grid md:grid-cols-2 gap-4 text-gray-700">
-        <li className="flex items-start">
-          ✅ <span className="ml-2">Python Basics & Beyond – Master Python fundamentals, data structures, and libraries.</span>
-        </li>
-        <li className="flex items-start">
-          📊 <span className="ml-2">Data Analysis & Visualization – Work with real-world datasets using Pandas, NumPy, Matplotlib.</span>
-        </li>
-        <li className="flex items-start">
-          🌐 <span className="ml-2">Flask & Web Deployment – Build and deploy real projects for your resume.</span>
-        </li>
-        <li className="flex items-start">
-          🔗 <span className="ml-2">GitHub & Version Control – Learn industry-standard project collaboration techniques.</span>
-        </li>
-        <li className="flex items-start">
-          🏅 <span className="ml-2">Industry & Research Training – Learn how to write research papers and network with professionals.</span>
-        </li>
-        <li className="flex items-start">
-          💼 <span className="ml-2">Internship & Career Preparation – Develop the skills to land internships & job opportunities.</span>
-        </li>
-      </ul>
-    </div>
-
-    {/* Who Is This For? */}
-    <div className="mt-12">
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4">Who Is This For? 👨‍💻</h3>
-      <p className="text-gray-700 leading-relaxed">
-        This workshop is specially designed for first-year engineering students and anyone who:
+    {/* Prerequisites Section */}
+    <div className="mt-16 text-center">
+      <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+        Prerequisites 🛠️
+      </h3>
+      <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        To get the most out of the workshop, please ensure you have:
       </p>
-      <ul className="list-disc list-inside mt-4 space-y-2 text-gray-700">
-        <li>🚀 Wants to start Data Science but doesn’t know where to begin.</li>
-        <li>🎯 Is looking for internship opportunities but lacks experience.</li>
-        <li>🛠 Wants to work on real projects and showcase them to industry professionals.</li>
-        <li>📜 Aims to publish research papers and build a strong academic profile.</li>
-      </ul>
-    </div>
-
-    {/* Prerequisites */}
-    <div className="mt-12">
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4">Prerequisites 🖥</h3>
-      <p className="text-gray-700 leading-relaxed">
-        To get the most out of this workshop, make sure you have:
+      <div className="mt-6 flex flex-wrap justify-center gap-6">
+        <div className="bg-white shadow-md p-4 rounded-lg w-48 text-center">
+          <span className="text-blue-500 text-lg">🐍</span>
+          <p className="text-gray-700 mt-2">Python (Latest Version)</p>
+        </div>
+        <div className="bg-white shadow-md p-4 rounded-lg w-48 text-center">
+          <span className="text-blue-500 text-lg">🖥️</span>
+          <p className="text-gray-700 mt-2">VS Code / Jupyter Notebook</p>
+        </div>
+        <div className="bg-white shadow-md p-4 rounded-lg w-48 text-center">
+          <span className="text-blue-500 text-lg">🔗</span>
+          <p className="text-gray-700 mt-2">Git & GitHub Account</p>
+        </div>
+      </div>
+      <p className="text-gray-500 mt-4">
+        *(New to these tools? No worries! We’ll provide a step-by-step guide before the sessions.)*
       </p>
-      <ul className="list-disc list-inside mt-4 space-y-2 text-gray-700">
-        <li>🐍 Python (latest version) installed</li>
-        <li>📝 VS Code (preferred) OR Jupyter Notebook / Anaconda</li>
-        <li>🔗 Git & GitHub Account (for project collaboration)</li>
-      </ul>
-      <p className="mt-4 text-gray-600">Don’t worry if you’re new to these tools—we’ll provide a step-by-step guide before the sessions begin.</p>
-    </div>
-
-    {/* Workshop Outcome */}
-    <div className="mt-12">
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4">What You’ll Get 🎯</h3>
-      <ul className="list-disc list-inside mt-4 space-y-2 text-gray-700">
-        <li>💡 Build real-world projects and add them to your portfolio.</li>
-        <li>🎓 Internship & research paper opportunities for top performers.</li>
-        <li>🤝 Industry interactions & expert mentorship to boost your career.</li>
-        <li>📜 Certificate of Completion as proof of your skills.</li>
-      </ul>
-    </div>
-
-    {/* Prizes & Recognition */}
-    <div className="mt-12">
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4">Prizes & Recognition 🏆</h3>
-      <ul className="list-disc list-inside mt-4 space-y-2 text-gray-700">
-        <li>🏅 <span className="font-semibold">Top 3-10 performers</span> get direct mentorship from industry experts.</li>
-        <li>📖 <span className="font-semibold">Top 3 participants</span> receive special training for research papers & job interviews.</li>
-        <li>🎁 Exciting rewards & recognition for outstanding contributions.</li>
-      </ul>
     </div>
   </div>
 </section>
