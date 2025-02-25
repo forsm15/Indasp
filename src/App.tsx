@@ -345,11 +345,11 @@ function App() {
       {/* Left Content */}
       <div className="flex flex-col gap-8">
         {/* Kickstart Box */}
-        <div className="group relative bg-white shadow-lg rounded-xl p-6 transition-all duration-300 hover:bg-blue-500 hover:text-white">
-          <h3 className="text-2xl font-semibold text-center transition-all duration-300 group-hover:opacity-0">
+        <div className="relative bg-white shadow-lg rounded-xl p-6 transition-all duration-300 hover:bg-blue-500 hover:text-white">
+          <h3 className="text-2xl font-semibold text-center">
             Kickstart Your Data Science Journey 🚀
           </h3>
-          <div className="absolute inset-0 flex items-center opacity-0 transition-all duration-300 group-hover:opacity-100 p-6">
+          <div className="max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out group-hover:max-h-40 p-2">
             <p className="leading-relaxed">
               This hands-on, 3-day workshop is designed for <strong>first-year engineering students</strong> 
               and <strong>beginners</strong> eager to explore Data Science and gain <strong>internship & research opportunities</strong>. 
@@ -359,11 +359,11 @@ function App() {
         </div>
 
         {/* RUDRA Box */}
-        <div className="group relative bg-white shadow-lg rounded-xl p-6 transition-all duration-300 hover:bg-blue-500 hover:text-white">
-          <h3 className="text-2xl font-semibold text-center transition-all duration-300 group-hover:opacity-0">
+        <div className="relative bg-white shadow-lg rounded-xl p-6 transition-all duration-300 hover:bg-blue-500 hover:text-white">
+          <h3 className="text-2xl font-semibold text-center">
             Why Choose RUDRA?
           </h3>
-          <div className="absolute inset-0 flex items-center opacity-0 transition-all duration-300 group-hover:opacity-100 p-6">
+          <div className="max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out group-hover:max-h-40 p-2">
             <p className="leading-relaxed">
               RUDRA is not just about teaching concepts—we <strong>create impact</strong>. Our members have won hackathons, 
               secured government grants, and built successful startups. Through <strong>industry connections</strong>, 
@@ -377,12 +377,12 @@ function App() {
       {/* Right Content */}
       <div className="flex flex-col gap-8">
         {/* Highlights Box */}
-        <div className="group relative bg-white shadow-lg rounded-xl p-6 transition-all duration-300 hover:bg-blue-500 hover:text-white">
-          <h3 className="text-2xl font-semibold text-center transition-all duration-300 group-hover:opacity-0">
+        <div className="relative bg-white shadow-lg rounded-xl p-6 transition-all duration-300 hover:bg-blue-500 hover:text-white">
+          <h3 className="text-2xl font-semibold text-center">
             Workshop Highlights 🌟
           </h3>
-          <div className="absolute inset-0 flex items-center opacity-0 transition-all duration-300 group-hover:opacity-100 p-6">
-            <ul className="space-y-3">
+          <div className="max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out group-hover:max-h-48 p-2">
+            <ul className="space-y-2">
               <li>✔️ <strong>Master Python Fundamentals</strong> – Learn key programming concepts, data structures, and libraries.</li>
               <li>📊 <strong>Data Analysis & Visualization</strong> – Work on real datasets with Pandas, NumPy & Matplotlib.</li>
               <li>💻 <strong>Web Deployment with Flask</strong> – Build & deploy projects to showcase on your resume.</li>
@@ -393,12 +393,12 @@ function App() {
         </div>
 
         {/* Achievements Box */}
-        <div className="group relative bg-white shadow-lg rounded-xl p-6 transition-all duration-300 hover:bg-blue-500 hover:text-white">
-          <h3 className="text-2xl font-semibold text-center transition-all duration-300 group-hover:opacity-0">
+        <div className="relative bg-white shadow-lg rounded-xl p-6 transition-all duration-300 hover:bg-blue-500 hover:text-white">
+          <h3 className="text-2xl font-semibold text-center">
             RUDRA's Achievements in 1 Year 🏆
           </h3>
-          <div className="absolute inset-0 flex items-center opacity-0 transition-all duration-300 group-hover:opacity-100 p-6">
-            <ul className="space-y-3">
+          <div className="max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out group-hover:max-h-48 p-2">
+            <ul className="space-y-2">
               <li>📌 Hosted 2 major Ideathons with <strong>250+ participants</strong> solving real-world challenges.</li>
               <li>🔗 Built partnerships with <strong>SriAranea, Prosidhhi, and top startups</strong> creating hiring pipelines.</li>
               <li>👨‍🏫 Industry mentorship from <strong>Unisys, Cisco, Goldman Sachs & Cryptic Minds</strong>.</li>
@@ -409,40 +409,9 @@ function App() {
         </div>
       </div>
     </div>
-
-    {/* Prizes & Prerequisites Section */}
-    <div className="mt-16 grid md:grid-cols-2 gap-12">
-      {/* Prizes Box */}
-      <div className="group relative bg-gray-100 shadow-lg rounded-xl p-6 transition-all duration-300 hover:bg-blue-500 hover:text-white">
-        <h3 className="text-2xl font-semibold text-center transition-all duration-300 group-hover:opacity-0">
-          Prizes & Recognition 🎁
-        </h3>
-        <div className="absolute inset-0 flex items-center opacity-0 transition-all duration-300 group-hover:opacity-100 p-6">
-          <ul className="space-y-3">
-            <li>🏅 <strong>Top 3-10 performers</strong> get direct mentorship from industry experts.</li>
-            <li>📄 <strong>Top 3 participants</strong> receive <strong>special research & job interview training</strong>.</li>
-            <li>🎖️ Certificates for all participants as proof of skills.</li>
-            <li>🎁 <strong>Exciting rewards</strong> for outstanding contributions!</li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Prerequisites Box */}
-      <div className="group relative bg-gray-100 shadow-lg rounded-xl p-6 transition-all duration-300 hover:bg-blue-500 hover:text-white">
-        <h3 className="text-2xl font-semibold text-center transition-all duration-300 group-hover:opacity-0">
-          Prerequisites 🛠️
-        </h3>
-        <div className="absolute inset-0 flex items-center opacity-0 transition-all duration-300 group-hover:opacity-100 p-6">
-          <ul className="space-y-3">
-            <li>🐍 <strong>Python (Latest Version)</strong></li>
-            <li>🖥️ <strong>VS Code / Jupyter Notebook</strong></li>
-            <li>🔗 <strong>Git & GitHub Account</strong></li>
-          </ul>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
+
 
 
 
