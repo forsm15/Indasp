@@ -446,39 +446,53 @@ function App() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center mb-12">Event Schedule</h2>
 
-        {/* Mapping Days */}
-        {Object.entries(schedule).map(([day, events], dayIndex) => (
-          <div key={dayIndex} className="mb-12">
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">{day}</h3>
+        {/* Day Selection Tabs */}
+        <div className="flex space-x-4 overflow-x-auto pb-4">
+          {Object.keys(schedule).map((day, index) => (
+            <button
+              key={index}
+              onClick={() => setSelectedDay(day)}
+              className={`px-4 py-2 rounded-lg font-semibold transition-all ${
+                selectedDay === day
+                  ? "bg-blue-600 text-white shadow-lg"
+                  : "bg-gray-200 text-gray-800"
+              }`}
+            >
+              {day}
+            </button>
+          ))}
+        </div>
 
-            <div className="relative border-l-4 border-blue-500 pl-8 ml-4">
-              {/* Mapping Events */}
-              {events.map((event, eventIndex) => (
-                <div
-                  key={eventIndex}
-                  className="relative mb-10 animate-fadeIn"
-                >
-                  {/* Dot Indicator */}
-                  <div className="absolute -left-5 top-3 w-4 h-4 bg-blue-500 rounded-full"></div>
+        {/* Horizontal Scrollable Timeline */}
+        <div className="relative overflow-x-auto whitespace-nowrap py-6">
+          <div className="flex space-x-8 items-center">
+            {schedule[selectedDay].map((event, eventIndex) => (
+              <div key={eventIndex} className="relative flex flex-col items-center">
+                {/* Timeline Line */}
+                {eventIndex > 0 && (
+                  <div className="absolute top-5 -left-4 w-20 h-1 bg-blue-500"></div>
+                )}
 
-                  {/* Event Details */}
-                  <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-                    <div className="flex items-center mb-2">
-                      <Clock className="h-5 w-5 text-blue-600 mr-2" />
-                      <span className="font-semibold">{event.time}</span>
-                    </div>
-                    <h4 className="text-lg font-bold">{event.title}</h4>
-                    <p className="text-gray-600">{event.speaker}</p>
-                    <div className="flex items-center text-gray-500 text-sm mt-2">
-                      <MapPin className="h-4 w-4 mr-1" />
-                      <span>{event.location}</span>
-                    </div>
+                {/* Dot Indicator */}
+                <div className="w-6 h-6 bg-blue-500 rounded-full shadow-md"></div>
+
+                {/* Event Details */}
+                <div className="bg-gray-100 p-4 mt-4 w-56 rounded-lg shadow-md text-center">
+                  <div className="flex items-center justify-center text-blue-600">
+                    <Clock className="h-5 w-5 mr-2" />
+                    <span className="font-semibold">{event.time}</span>
+                  </div>
+                  <h4 className="text-lg font-bold mt-2">{event.title}</h4>
+                  <p className="text-gray-600">{event.speaker}</p>
+                  <div className="flex items-center justify-center text-gray-500 text-sm mt-2">
+                    <MapPin className="h-4 w-4 mr-1" />
+                    <span>{event.location}</span>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </section>
 
