@@ -452,15 +452,13 @@ function App() {
             <div key={index} className="flex-1 bg-gray-100 p-6 rounded-lg shadow-md">
               <h3 className="text-2xl font-semibold text-center mb-6">{day.day}</h3>
 
-              {/* Vertical Timeline */}
-              <div className="relative border-l-4 border-blue-500 pl-6">
                 {day.events.map((event, i) => (
                   <div key={i} className="mb-8 relative">
                     {/* Dot (Centered on the line) */}
-                    <div className="absolute left-[-8px] top-2 w-5 h-5 bg-blue-500 rounded-full border-4 border-white shadow-md"></div>
+                    <div className="absolute left-[-14px] top-2 w-5 h-5 bg-blue-500 rounded-full border-4 border-white shadow-md"></div>
               
                     {/* Horizontal Connector Line */}
-                    <div className="absolute left-[-4px] top-4 w-10 border-t-2 border-blue-500"></div>
+                    <div className="absolute left-[-7px] top-4 w-10 border-t-2 border-blue-500"></div>
 
                     {/* Time & Details */}
                     <div className="flex items-start">
