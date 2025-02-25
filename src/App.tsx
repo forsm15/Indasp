@@ -9,7 +9,7 @@ import benProfile from "../image/ben.jpg";
 import ananthProfile from "../image/ananthpullur.jpg";
 import { Clock, MapPin } from "lucide-react";
 import MaskedAbout from "./components/MaskedAbout";
-
+import { Briefcase, GraduationCap, Rocket, BarChart, Users, CheckCircle } from "lucide-react";
 
 import {
   Menu,
@@ -333,78 +333,80 @@ function App() {
         </section>
 
         {/* About Workshop Section */}
-        {/* About Workshop Section */}
 <section id="about" className="py-20 bg-gray-50">
-  <div className="max-w-7xl mx-auto px-6 lg:px-8">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
-      Introduction to Data Science with Python (InDaSP)
+      About the Workshop
     </h2>
 
-    <div className="grid md:grid-cols-2 gap-12">
-      {/* Left Section - Main Content */}
-      <div className="space-y-6">
-        <div className="relative group bg-white shadow-lg rounded-xl p-6 cursor-pointer overflow-hidden transition duration-300 hover:shadow-2xl">
-          <h3 className="text-2xl font-semibold text-gray-800 text-center group-hover:opacity-0 transition-opacity duration-300">
-            Kickstart Your Data Science Journey 🚀
-          </h3>
-          <div className="absolute inset-0 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Kickstart Your Data Science Journey 🚀</h3>
-            <p className="text-gray-600 leading-relaxed">
-              This hands-on, 3-day workshop is designed for <strong>first-year engineering students</strong> and <strong>beginners</strong> eager to explore Data Science and gain <strong>internship & research opportunities</strong>.
-            </p>
-          </div>
+    {/* Grid Layout for Sections */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {/* Why Are We Doing This? */}
+      <div className="p-8 bg-white rounded-2xl shadow-lg transform hover:scale-105 transition duration-300">
+        <div className="flex items-center space-x-3">
+          <Rocket className="w-8 h-8 text-blue-600" />
+          <h3 className="text-2xl font-semibold text-gray-800">Why Are We Doing This?</h3>
         </div>
-
-        <div className="relative group bg-white shadow-lg rounded-xl p-6 cursor-pointer overflow-hidden transition duration-300 hover:shadow-2xl">
-          <h3 className="text-2xl font-semibold text-gray-800 text-center group-hover:opacity-0 transition-opacity duration-300">
-            Why Choose RUDRA?
-          </h3>
-          <div className="absolute inset-0 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Why Choose RUDRA?</h3>
-            <p className="text-gray-600 leading-relaxed">
-              RUDRA is not just about teaching concepts—we <strong>create impact</strong>. Our members have won hackathons, secured government grants, and built successful startups.
-            </p>
-          </div>
-        </div>
+        <p className="text-gray-600 mt-4">
+          RUDRA was established just a year ago, but we’ve already made a massive impact in Data Science & Tech.
+        </p>
+        <ul className="mt-4 space-y-2 text-gray-600">
+          <li>🎯 Hosted two major Ideathons with 250+ participants</li>
+          <li>🤝 Built hiring pipelines with top companies</li>
+          <li>🎓 Mentored by professionals from Cisco, Goldman Sachs & more</li>
+          <li>📈 Helped 500+ students gain internships & research roles</li>
+        </ul>
       </div>
 
-      {/* Right Section - Key Highlights */}
-      <div className="space-y-6">
-        <div className="relative group bg-white shadow-lg rounded-xl p-6 cursor-pointer overflow-hidden transition duration-300 hover:shadow-2xl">
-          <h3 className="text-xl font-semibold text-gray-800 text-center group-hover:opacity-0 transition-opacity duration-300">
-            Workshop Highlights 🌟
-          </h3>
-          <div className="absolute inset-0 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Workshop Highlights 🌟</h3>
-            <ul className="text-gray-600 space-y-3">
-              <li>✔️ <strong>Master Python Fundamentals</strong></li>
-              <li>📊 <strong>Data Analysis & Visualization</strong></li>
-              <li>💻 <strong>Web Deployment with Flask</strong></li>
-              <li>🛠️ <strong>GitHub & Version Control</strong></li>
-              <li>📄 <strong>Internship & Career Preparation</strong></li>
-            </ul>
-          </div>
+      {/* What You'll Learn */}
+      <div className="p-8 bg-white rounded-2xl shadow-lg transform hover:scale-105 transition duration-300">
+        <div className="flex items-center space-x-3">
+          <BarChart className="w-8 h-8 text-green-600" />
+          <h3 className="text-2xl font-semibold text-gray-800">What You’ll Learn</h3>
         </div>
+        <ul className="text-gray-600 mt-4 space-y-2">
+          <li>✅ Python Basics & Data Structures</li>
+          <li>📊 Data Analysis & Visualization with Pandas & Matplotlib</li>
+          <li>🌐 Flask & Web Deployment for real-world projects</li>
+          <li>🛠 GitHub & Version Control for industry collaboration</li>
+          <li>🎯 Internship & Career Preparation</li>
+        </ul>
+      </div>
 
-        <div className="relative group bg-white shadow-lg rounded-xl p-6 cursor-pointer overflow-hidden transition duration-300 hover:shadow-2xl">
-          <h3 className="text-xl font-semibold text-gray-800 text-center group-hover:opacity-0 transition-opacity duration-300">
-            Prizes & Recognition 🎁
-          </h3>
-          <div className="absolute inset-0 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Prizes & Recognition 🎁</h3>
-            <ul className="text-gray-600 space-y-3">
-              <li>🏅 <strong>Top performers get direct mentorship</strong></li>
-              <li>📄 <strong>Special research & job interview training</strong></li>
-              <li>🎖️ <strong>Certificates for all participants</strong></li>
-              <li>🎁 <strong>Exciting rewards!</strong></li>
-            </ul>
-          </div>
+      {/* Who Is This For? */}
+      <div className="p-8 bg-white rounded-2xl shadow-lg transform hover:scale-105 transition duration-300">
+        <div className="flex items-center space-x-3">
+          <Users className="w-8 h-8 text-purple-600" />
+          <h3 className="text-2xl font-semibold text-gray-800">Who Is This For?</h3>
         </div>
+        <p className="text-gray-600 mt-4">
+          This workshop is perfect for beginners and first-year engineering students who:
+        </p>
+        <ul className="mt-4 space-y-2 text-gray-600">
+          <li>🔹 Want to start Data Science but don’t know where to begin</li>
+          <li>🔹 Are looking for internships but lack experience</li>
+          <li>🔹 Want to build real projects and showcase them to industry professionals</li>
+          <li>🔹 Aim to publish research papers and build a strong academic profile</li>
+        </ul>
+      </div>
+
+      {/* Workshop Outcomes */}
+      <div className="p-8 bg-white rounded-2xl shadow-lg transform hover:scale-105 transition duration-300">
+        <div className="flex items-center space-x-3">
+          <CheckCircle className="w-8 h-8 text-orange-600" />
+          <h3 className="text-2xl font-semibold text-gray-800">Outcome of the Workshop</h3>
+        </div>
+        <ul className="text-gray-600 mt-4 space-y-2">
+          <li>💡 Build real-world projects & add them to your portfolio</li>
+          <li>🎓 Internship & research paper opportunities for top performers</li>
+          <li>📢 Industry interactions & expert mentorship</li>
+          <li>📜 Certificate of Completion to boost your career</li>
+          <li>🏆 Prizes & Recognition for outstanding contributions</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
-
 
 
 
