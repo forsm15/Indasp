@@ -13,7 +13,7 @@ const Contact = () => {
 
 const handleSubmit = (e: React.FormEvent) => {
   e.preventDefault();
-  const email = "sujayvk.btech23@rvu.edu.in";
+  const email = "contact.rudrarvu@gmail.com";
   const subject = encodeURIComponent(formData.subject);
   const body = encodeURIComponent(formData.message);
   
