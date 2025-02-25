@@ -307,6 +307,12 @@ function App() {
         {/* Why Join Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Scrolling Text Section */}
+    <div className="relative mt-10 overflow-hidden bg-gray-80 text-white py-2">
+      <div className="whitespace-nowrap animate-marquee text-lg font-semibold">
+        🚀 Skills get you internships! 🌟 Top 3-10 performers get industry expert guidance! 🎯Top 3 are trained for research paper!🔥Interview Opportunities!
+      </div>
+    </div>
             <h2 className="text-4xl font-bold text-center mb-16">
               Why Join Our Workshop?
             </h2>
@@ -342,8 +348,52 @@ function App() {
           </div>
         </section>
 
+        
+        {/* Prizes Section */}
+<section id="prizes" className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-4xl font-bold text-center mb-12">Exciting Prizes</h2>
+    
+    {/* Prize Cards */}
+    <div className="grid md:grid-cols-3 gap-8">
+      <div className="bg-white p-8 rounded-lg shadow-lg text-center">
+        <Trophy className="w-16 h-16 mx-auto mb-6 text-yellow-500" />
+        <p className="text-3xl font-bold text-gray-700 mb-2">1000$💰 WORTH</p>
+        <h3 className="text-2xl font-bold mb-4">First Prize</h3>
+        <p className="text-gray-600">
+          🎓 Personal Mentorship <br />
+          📄 Research Paper Training <br />
+          🚀 Internship Opportunities <br />
+          🌍 Industry Connect
+        </p>
+      </div>
+      <div className="bg-white p-8 rounded-lg shadow-lg text-center">
+        <Trophy className="w-16 h-16 mx-auto mb-6 text-gray-400" />
+        <p className="text-3xl font-bold text-gray-700 mb-2">500$💰 WORTH</p>
+        <h3 className="text-2xl font-bold mb-4">Second Prize</h3>
+        <p className="text-gray-600">
+          🎓 Personal Mentorship <br />
+          🚀 Internship Opportunities <br />
+          🌍 Industry Connect
+        </p>
+      </div>
+      <div className="bg-white p-8 rounded-lg shadow-lg text-center">
+        <Trophy className="w-16 h-16 mx-auto mb-6 text-orange-500" />
+        <p className="text-3xl font-bold text-gray-700 mb-2">250$💰 WORTH</p>
+        <h3 className="text-2xl font-bold mb-4">Third Prize</h3>
+        <p className="text-gray-600">
+          🎓 Personal Mentorship <br />
+          🌍 Industry Connect
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        
         {/* Trainer Section */}
-        <section id="trainers" className="py-20 bg-white">
+        <section id="trainers" className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold text-center mb-12">
               Meet Your Trainer
@@ -395,54 +445,9 @@ function App() {
           </div>
         </section>
 
-{/* Prizes Section */}
-<section id="prizes" className="py-20 bg-gray-50">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 className="text-4xl font-bold text-center mb-12">Exciting Prizes</h2>
-    
-    {/* Prize Cards */}
-    <div className="grid md:grid-cols-3 gap-8">
-      <div className="bg-white p-8 rounded-lg shadow-lg text-center">
-        <Trophy className="w-16 h-16 mx-auto mb-6 text-yellow-500" />
-        <p className="text-3xl font-bold text-gray-700 mb-2">1000$💰 WORTH</p>
-        <h3 className="text-2xl font-bold mb-4">First Prize</h3>
-        <p className="text-gray-600">
-          🎓 Personal Mentorship <br />
-          📄 Research Paper Training <br />
-          🚀 Internship Opportunities <br />
-          🌍 Industry Connect
-        </p>
-      </div>
-      <div className="bg-white p-8 rounded-lg shadow-lg text-center">
-        <Trophy className="w-16 h-16 mx-auto mb-6 text-gray-400" />
-        <p className="text-3xl font-bold text-gray-700 mb-2">500$💰 WORTH</p>
-        <h3 className="text-2xl font-bold mb-4">Second Prize</h3>
-        <p className="text-gray-600">
-          🎓 Personal Mentorship <br />
-          🚀 Internship Opportunities <br />
-          🌍 Industry Connect
-        </p>
-      </div>
-      <div className="bg-white p-8 rounded-lg shadow-lg text-center">
-        <Trophy className="w-16 h-16 mx-auto mb-6 text-orange-500" />
-        <p className="text-3xl font-bold text-gray-700 mb-2">250$💰 WORTH</p>
-        <h3 className="text-2xl font-bold mb-4">Third Prize</h3>
-        <p className="text-gray-600">
-          🎓 Personal Mentorship <br />
-          🌍 Industry Connect
-        </p>
-      </div>
-    </div>
 
-    {/* Scrolling Text Section */}
-    <div className="relative mt-10 overflow-hidden bg-gray-800 text-white py-2">
-      <div className="whitespace-nowrap animate-marquee text-lg font-semibold">
-        🚀 Skills get you internships! 🌟 Top 3-10 performers get industry expert guidance! 🎯Top 3 are trained for research paper!🔥Interview Opportunities!
-      </div>
-    </div>
-  </div>
-</section>
 
+        
         {/* Schedule Section */}
         <section id="schedule" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
