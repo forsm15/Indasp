@@ -57,30 +57,31 @@ const teamMembers: TeamMember[] = [
   }
 ];
 
-const schedule = {
-  "Day 1 - Kickoff & Insights": [
-    {
-      time: "09:00 AM",
-      title: "Opening Keynote",
-      speaker: "Dr. Sarah Wilson",
-      location: "Main Hall",
-    },
-    {
-      time: "10:30 AM",
-      title: "Patent Drafting Workshop",
-      speaker: "Prof. James Anderson",
-      location: "Workshop Room A",
-    },
-  ],
-  "Day 2 - Learning & Networking": [
-    {
-      time: "02:00 PM",
-      title: "Industry Panel Discussion",
-      speaker: "Various Industry Leaders",
-      location: "Conference Room",
-    },
-  ],
-};
+const eventDays = [
+  {
+    day: "Day 1",
+    events: [
+      { time: "09:00 AM", title: "Opening Keynote", speaker: "Dr. Sarah Wilson", location: "Main Hall" },
+      { time: "10:30 AM", title: "Patent Drafting Workshop", speaker: "Prof. James Anderson", location: "Workshop Room A" }
+    ]
+  },
+  {
+    day: "Day 2",
+    events: [
+      { time: "09:00 AM", title: "Tech Trends", speaker: "Elon Reed", location: "Auditorium" },
+      { time: "11:00 AM", title: "Networking Session", speaker: "Industry Experts", location: "Lobby" },
+      { time: "01:30 PM", title: "AI & Ethics", speaker: "Dr. Alice Brown", location: "Room B" },
+      { time: "03:00 PM", title: "Panel Discussion", speaker: "Various Leaders", location: "Conference Hall" }
+    ]
+  },
+  {
+    day: "Day 3",
+    events: [
+      { time: "10:00 AM", title: "Startup Pitching", speaker: "Investor Panel", location: "Main Hall" },
+      { time: "02:00 PM", title: "Closing Remarks", speaker: "Dr. Sarah Wilson", location: "Auditorium" }
+    ]
+  }
+];
 
 const whyJoinItems: WhyJoinItem[] = [
   {
@@ -442,40 +443,37 @@ function App() {
 
         {/* Schedule Section */}
         <section id="schedule" className="py-20 bg-white">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center mb-12">Event Schedule</h2>
 
-        {/* Timeline Wrapper */}
-        <div className="relative">
-          {/* Vertical Line */}
-          <div className="absolute left-4 top-0 w-1 h-full bg-blue-500"></div>
-          
-          {Object.entries(schedule).map(([day, events], dayIndex) => (
-            <div key={dayIndex} className={`relative mb-12 ml-${dayIndex * 10} flex flex-col`}> 
-              {/* Day Header */}
-              <div className="flex items-center space-x-4">
-                {/* Triangle Indicator */}
-                <div className="w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-b-[16px] border-b-blue-500"></div>
-                <h3 className="text-2xl font-bold text-gray-800">{day}</h3>
-              </div>
-              
-              {/* Event List */}
-              <div className="relative border-l-4 border-blue-500 pl-8 ml-4 mt-4">
-                {events.map((event, eventIndex) => (
-                  <div key={eventIndex} className="relative mb-10 animate-fadeIn">
-                    {/* Dot Indicator */}
-                    <div className="absolute -left-5 top-3 w-4 h-4 bg-blue-500 rounded-full"></div>
-                    {/* Event Details */}
-                    <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-                      <div className="flex items-center mb-2">
-                        <Clock className="h-5 w-5 text-blue-600 mr-2" />
-                        <span className="font-semibold">{event.time}</span>
+        {/* Horizontal Flex Container for Days */}
+        <div className="flex justify-between gap-8">
+          {eventDays.map((day, index) => (
+            <div key={index} className="flex-1 bg-gray-100 p-6 rounded-lg shadow-md">
+              <h3 className="text-2xl font-semibold text-center mb-6">{day.day}</h3>
+
+              {/* Vertical Timeline */}
+              <div className="relative border-l-4 border-blue-500 pl-6">
+                {day.events.map((event, i) => (
+                  <div key={i} className="mb-8 relative">
+                    {/* Dot */}
+                    <div className="absolute -left-3 w-6 h-6 bg-blue-500 rounded-full border-4 border-white shadow-md"></div>
+
+                    {/* Time & Details */}
+                    <div className="flex items-start">
+                      {/* Time */}
+                      <div className="text-blue-600 font-semibold flex items-center">
+                        <Clock className="h-5 w-5 mr-2" />
+                        <span>{event.time}</span>
                       </div>
-                      <h4 className="text-lg font-bold">{event.title}</h4>
-                      <p className="text-gray-600">{event.speaker}</p>
-                      <div className="flex items-center text-gray-500 text-sm mt-2">
-                        <MapPin className="h-4 w-4 mr-1" />
-                        <span>{event.location}</span>
+                      {/* Event Info */}
+                      <div className="ml-6">
+                        <h4 className="text-lg font-bold">{event.title}</h4>
+                        <p className="text-gray-600">{event.speaker}</p>
+                        <div className="flex items-center text-gray-500 text-sm">
+                          <MapPin className="h-4 w-4 mr-1" />
+                          <span>{event.location}</span>
+                        </div>
                       </div>
                     </div>
                   </div>
