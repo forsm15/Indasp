@@ -456,8 +456,9 @@ function App() {
               <div className="relative border-l-4 border-blue-500 pl-6">
                 {day.events.map((event, i) => (
                   <div key={i} className="mb-8 relative">
-                    {/* Dot */}
-                    <div className="absolute -left-3 w-6 h-6 bg-blue-500 rounded-full border-4 border-white shadow-md"></div>
+                    {/* Dot (Now aligned with the line) */}
+                    <div className="absolute left-[-10px] top-0 w-5 h-5 bg-blue-500 rounded-full border-4 border-white shadow-md"></div>
+
 
                     {/* Time & Details */}
                     <div className="flex items-start">
