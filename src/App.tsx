@@ -86,17 +86,17 @@ const eventDays = [
 const whyJoinItems: WhyJoinItem[] = [
   {
     title: "Expert Mentors",
-    description: "🔹 Expert Mentors Learn from industry professionals with real-world experience in Python and Data Science.",
+    description: "🔹Exclusive mentorship from industry professionals. Top participants present projects to experts. Standout performers may get internship or interview opportunities..",
     icon: GraduationCap
   },
   {
     title: "Hands-on Learning",
-    description: "💡 Hands-on Learning Work on real datasets, implement machine learning models, and gain practical skills.",
+    description: "💡 Learn Flask, Data Analysis, and real-world ML workflows. Work on live GitHub projects and gain practical skills. Build and deploy applications with industry tools.",
     icon: Lightbulb
   },
   {
     title: "Exciting Prizes",
-    description: "🏆 Exciting Challenges Compete in data science challenges, showcase your skills, and win exclusive rewards.",
+    description: "🏆 Win internship opportunities with top companies. Get research paper training and certification. Showcase your skills and earn exclusive rewards.",
     icon: Trophy
   }
 ];
