@@ -8,21 +8,21 @@ const MaskedAbout = () => {
     offset: ["start start", "end start"],
   });
 
-  // Heading animation (moves up and fades out)
-  const headingY = useTransform(scrollYProgress, [0, 0.2, 0.4], ["0%", "-50%", "-100%"]);
-  const headingOpacity = useTransform(scrollYProgress, [0, 0.3, 0.4], [1, 0.5, 0]);
+  // Heading moves up and fades out 3x faster than content
+  const headingY = useTransform(scrollYProgress, [0, 0.1], ["0%", "-100%"]);
+  const headingOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
 
-  // Content blocks slide in one by one
+  // Content scrolls in at normal speed
   const contentY = useTransform(scrollYProgress, [0.3, 0.9], ["50%", "0%"]);
   const contentOpacity = useTransform(scrollYProgress, [0.3, 0.9], [0, 1]);
 
-  // Heading reappears at the end
+  // Heading returns at the end at normal speed
   const headingReturnY = useTransform(scrollYProgress, [0.9, 1], ["100%", "0%"]);
   const headingReturnOpacity = useTransform(scrollYProgress, [0.9, 1], [0, 1]);
 
   return (
     <div ref={containerRef} className="relative min-h-screen bg-gray-900 text-white flex flex-col justify-center items-center overflow-hidden">
-      {/* Initial Heading (Fades Out) */}
+      {/* Initial Heading (Moves up 3x faster) */}
       <motion.h1 
         style={{ y: headingY, opacity: headingOpacity }}
         className="absolute top-1/2 text-5xl font-bold"
