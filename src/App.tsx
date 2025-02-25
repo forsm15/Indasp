@@ -331,10 +331,10 @@ function App() {
             </h2>
             <div className="prose prose-lg mx-auto">
               <p className="text-gray-600 text-center max-w-3xl mx-auto">
-                Join us for an immersive Python Data Science workshop! Gain hands-on experience with real-world datasets,
-                learn from industry experts, and master essential skills in data analysis, visualization, and machine learning.
-                Whether you're a beginner or looking to refine your expertise, this workshop will equip you with the tools to turn data 
-                into powerful insights. Don't miss this opportunity to level up your data science journey! 🚀
+                Join our Python Data Science Workshop and master data analysis, visualization, and web deployment using industry-standard tools.
+                Learn to clean and process real-world datasets, create insightful visualizations, and build interactive dashboards with Pandas, Matplotlib,
+                Seaborn, and Flask. Work on live GitHub projects, collaborate with peers, and gain hands-on experience with practical coding exercises. 
+                Whether you're a beginner or looking to refine your skills, this workshop will help you turnraw data into meaningful insights! 🚀
               </p>
             </div>
           </div>
