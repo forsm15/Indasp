@@ -8,19 +8,19 @@ const MaskedAbout = () => {
     offset: ["start start", "end start"],
   });
 
-  // Disable outer scrolling while inside the section
+  // Prevent outer webpage from scrolling while inside the section
   useEffect(() => {
-    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden"; // Hide outer scrolling
     return () => {
-      document.body.style.overflow = "auto"; // Restore scrolling after exit
+      document.documentElement.style.overflow = "auto"; // Restore after exit
     };
   }, []);
 
-  // Heading moves 3× faster than content
+  // Heading moves up and fades out 3× faster
   const headingY = useTransform(scrollYProgress, [0, 0.1], ["0%", "-100%"]);
   const headingOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
 
-  // Content scrolls normally inside without showing scrollbar
+  // Content scrolls inside smoothly (no scrollbar visible)
   const contentY = useTransform(scrollYProgress, [0.3, 1], ["50%", "0%"]);
   const contentOpacity = useTransform(scrollYProgress, [0.3, 1], [0, 1]);
 
@@ -44,7 +44,7 @@ const MaskedAbout = () => {
       {/* Full Content Appearing After Split */}
       <motion.div 
         style={{ opacity: contentOpacity, y: contentY }} 
-        className="relative max-w-7xl w-full mx-auto px-6 lg:px-8 h-screen overflow-y-scroll scrollbar-hidden"
+        className="relative max-w-7xl w-full mx-auto px-6 lg:px-8 h-screen overflow-y-auto no-scrollbar"
       >
         {/* Introduction */}
         <h2 className="text-4xl font-bold text-center mb-12">
