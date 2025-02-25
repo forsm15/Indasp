@@ -44,7 +44,7 @@ const handleSubmit = (e: React.FormEvent) => {
               <Mail className="h-6 w-6 text-indigo-600 mt-1 mr-4" />
               <div>
                 <h3 className="text-lg font-medium text-gray-900">Email</h3>
-                <p className="text-gray-600">sujayvk.btech23@rvu.edu.in</p>
+                <p className="text-gray-600">contact.rudrarvu@gmail.com</p>
               </div>
             </div>
             <div className="flex items-start">
