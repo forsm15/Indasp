@@ -7,7 +7,7 @@ import anirudhProfile from "../image/anirudh.jpg";
 import bruhatProfile from "../image/bruhat.jpg";
 import benProfile from "../image/ben.jpg";
 import ananthProfile from "../image/ananthpullur.jpg";
-
+import { Clock, MapPin } from "lucide-react";
 
 
 import {
@@ -57,26 +57,30 @@ const teamMembers: TeamMember[] = [
   }
 ];
 
-const schedule: ScheduleItem[] = [
-  {
-    time: "09:00 AM",
-    title: "Opening Keynote",
-    speaker: "Dr. Sarah Wilson",
-    location: "Main Hall"
-  },
-  {
-    time: "10:30 AM",
-    title: "Patent Drafting Workshop",
-    speaker: "Prof. James Anderson",
-    location: "Workshop Room A"
-  },
-  {
-    time: "02:00 PM",
-    title: "Industry Panel Discussion",
-    speaker: "Various Industry Leaders",
-    location: "Conference Room"
-  }
-];
+const schedule = {
+  "Day 1 - Kickoff & Insights": [
+    {
+      time: "09:00 AM",
+      title: "Opening Keynote",
+      speaker: "Dr. Sarah Wilson",
+      location: "Main Hall",
+    },
+    {
+      time: "10:30 AM",
+      title: "Patent Drafting Workshop",
+      speaker: "Prof. James Anderson",
+      location: "Workshop Room A",
+    },
+  ],
+  "Day 2 - Learning & Networking": [
+    {
+      time: "02:00 PM",
+      title: "Industry Panel Discussion",
+      speaker: "Various Industry Leaders",
+      location: "Conference Room",
+    },
+  ],
+};
 
 const whyJoinItems: WhyJoinItem[] = [
   {
@@ -439,26 +443,44 @@ function App() {
 
         {/* Schedule Section */}
         <section id="schedule" className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-center mb-12">Event Schedule</h2>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {schedule.map((item, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-6 shadow-sm">
-                  <div className="flex items-center mb-4">
-                    <Clock className="h-5 w-5 text-blue-600 mr-2" />
-                    <span className="font-semibold">{item.time}</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-gray-600 mb-2">{item.speaker}</p>
-                  <div className="flex items-center text-gray-500">
-                    <MapPin className="h-4 w-4 mr-1" />
-                    <span>{item.location}</span>
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-4xl font-bold text-center mb-12">Event Schedule</h2>
+
+        {/* Mapping Days */}
+        {Object.entries(schedule).map(([day, events], dayIndex) => (
+          <div key={dayIndex} className="mb-12">
+            <h3 className="text-2xl font-bold text-gray-800 mb-6">{day}</h3>
+
+            <div className="relative border-l-4 border-blue-500 pl-8 ml-4">
+              {/* Mapping Events */}
+              {events.map((event, eventIndex) => (
+                <div
+                  key={eventIndex}
+                  className="relative mb-10 animate-fadeIn"
+                >
+                  {/* Dot Indicator */}
+                  <div className="absolute -left-5 top-3 w-4 h-4 bg-blue-500 rounded-full"></div>
+
+                  {/* Event Details */}
+                  <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <div className="flex items-center mb-2">
+                      <Clock className="h-5 w-5 text-blue-600 mr-2" />
+                      <span className="font-semibold">{event.time}</span>
+                    </div>
+                    <h4 className="text-lg font-bold">{event.title}</h4>
+                    <p className="text-gray-600">{event.speaker}</p>
+                    <div className="flex items-center text-gray-500 text-sm mt-2">
+                      <MapPin className="h-4 w-4 mr-1" />
+                      <span>{event.location}</span>
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-        </section>
+        ))}
+      </div>
+    </section>
 
 
         {/* Team Section */}
