@@ -5,51 +5,46 @@ const MaskedAbout = () => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end start"],
+    offset: ["start start", "end start"],
   });
 
-  // Split section animation
-  const splitLeft = useTransform(scrollYProgress, [0, 0.5, 1], ["0%", "-50%", "-100%"]);
-  const splitRight = useTransform(scrollYProgress, [0, 0.5, 1], ["0%", "50%", "100%"]);
-  const headingOpacity = useTransform(scrollYProgress, [0, 0.2, 0.5], [1, 1, 0]); // Disappear heading
-  const contentOpacity = useTransform(scrollYProgress, [0.5, 0.8, 1], [0, 1, 1]); // Reveal content
-  const contentY = useTransform(scrollYProgress, [0.5, 1], ["50%", "0%"]); // Slide content up
+  // Heading animation (moves up and fades out)
+  const headingY = useTransform(scrollYProgress, [0, 0.2, 0.4], ["0%", "-50%", "-100%"]);
+  const headingOpacity = useTransform(scrollYProgress, [0, 0.3, 0.4], [1, 0.5, 0]);
+
+  // Content blocks slide in one by one
+  const contentY = useTransform(scrollYProgress, [0.3, 0.9], ["50%", "0%"]);
+  const contentOpacity = useTransform(scrollYProgress, [0.3, 0.9], [0, 1]);
+
+  // Heading reappears at the end
+  const headingReturnY = useTransform(scrollYProgress, [0.9, 1], ["100%", "0%"]);
+  const headingReturnOpacity = useTransform(scrollYProgress, [0.9, 1], [0, 1]);
 
   return (
-    <div ref={containerRef} className="relative min-h-screen overflow-hidden bg-gray-900 text-white">
-      {/* Initial Section Before Splitting */}
-      <motion.div 
-        style={{ opacity: headingOpacity }} 
-        className="absolute inset-0 flex items-center justify-center text-5xl font-bold"
+    <div ref={containerRef} className="relative min-h-screen bg-gray-900 text-white flex flex-col justify-center items-center overflow-hidden">
+      {/* Initial Heading (Fades Out) */}
+      <motion.h1 
+        style={{ y: headingY, opacity: headingOpacity }}
+        className="absolute top-1/2 text-5xl font-bold"
       >
-        About Workshop 🚀
-      </motion.div>
+        Introduction to Data Science 🚀
+      </motion.h1>
 
-      {/* Splitting Effect */}
-      <motion.div 
-        style={{ x: splitLeft }} 
-        className="absolute inset-0 bg-black w-1/2 h-full left-0"
-      />
-      <motion.div 
-        style={{ x: splitRight }} 
-        className="absolute inset-0 bg-black w-1/2 h-full right-0"
-      />
-
-      {/* Content Appearing After Split */}
+      {/* Full Content Appearing After Split */}
       <motion.div 
         style={{ opacity: contentOpacity, y: contentY }} 
-        className="relative max-w-7xl w-full mx-auto px-6 lg:px-8 mt-20"
+        className="relative max-w-7xl w-full mx-auto px-6 lg:px-8"
       >
-        <h2 className="text-4xl font-bold text-center mb-6">
+        {/* Introduction */}
+        <h2 className="text-4xl font-bold text-center mb-12">
           Introduction to Data Science with Python 🚀
         </h2>
-
         <p className="text-lg text-center leading-relaxed max-w-4xl mx-auto">
           A power-packed, hands-on experience designed for first-year engineering students and beginners who want to kickstart their Data Science journey.
         </p>
 
-        {/* Achievements */}
-        <div className="mt-8">
+        {/* Why Are We Doing This? */}
+        <div className="mt-12">
           <h3 className="text-2xl font-semibold text-center mb-4">Why Are We Doing This?</h3>
           <ul className="list-disc text-lg space-y-2 max-w-4xl mx-auto text-center">
             <li>🎯 Organized major Ideathons with 250+ participants.</li>
@@ -110,11 +105,19 @@ const MaskedAbout = () => {
           <h3 className="text-2xl font-semibold text-center mb-4">Prizes & Recognition 🏆</h3>
           <ul className="list-disc text-lg space-y-2 max-w-4xl mx-auto text-center">
             <li>🏅 Top 3-10 get mentorship from industry experts.</li>
-            <li>📖 Top 3 receive special training for research & job interviews.</li>
+            <li>📖 Top 3 receive research & job interview training.</li>
             <li>🎁 Exciting rewards for outstanding participants.</li>
           </ul>
         </div>
       </motion.div>
+
+      {/* Heading Reappears at the End */}
+      <motion.h1 
+        style={{ y: headingReturnY, opacity: headingReturnOpacity }}
+        className="absolute bottom-1/2 text-5xl font-bold"
+      >
+        Introduction to Data Science 🚀
+      </motion.h1>
     </div>
   );
 };
