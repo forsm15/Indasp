@@ -285,12 +285,13 @@ function App() {
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-blue-1000 text-white py-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in bg-gradient-to-b from-gray-500 via-gray-700 to-black bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in bg-gradient-to-b from-black via-gray-700 to-gray-500 bg-clip-text text-transparent">
   Introduction to Data Science With Python!
 </h1>
 <p className="text-xl md:text-2xl mb-12 text-gray-800 animate-fade-in-delay">
   Opportunities await you!
 </p>
+
 
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSdQ-Zvzg7NBqr8tfzHnoy3QOP0tJM8Kt48ZH7RL3Vk89KcGoQ/viewform?usp=sharing"
