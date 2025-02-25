@@ -117,6 +117,7 @@ const navItems: NavItem[] = [
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [selectedDay, setSelectedDay] = useState(Object.keys(schedule)[0]);
 
 
   const scrollToSection = (id: string) => {
