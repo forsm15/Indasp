@@ -402,8 +402,8 @@ function App() {
     <div className="grid md:grid-cols-3 gap-8">
       <div className="bg-white p-8 rounded-lg shadow-lg text-center">
         <Trophy className="w-16 h-16 mx-auto mb-6 text-yellow-500" />
+        <p className="text-3xl font-bold text-gray-700 mb-2">1000$💰 WORTH</p>
         <h3 className="text-2xl font-bold mb-4">First Prize</h3>
-        <p className="text-3xl font-bold text-blue-600 mb-2">1000$💰 WORTH</p>
         <p className="text-gray-600">
           🎓 Personal Mentorship <br />
           📄 Research Paper Training <br />
@@ -413,8 +413,8 @@ function App() {
       </div>
       <div className="bg-white p-8 rounded-lg shadow-lg text-center">
         <Trophy className="w-16 h-16 mx-auto mb-6 text-gray-400" />
+        <p className="text-3xl font-bold text-gray-700 mb-2">500$💰 WORTH</p>
         <h3 className="text-2xl font-bold mb-4">Second Prize</h3>
-        <p className="text-3xl font-bold text-blue-600 mb-2">500$💰 WORTH</p>
         <p className="text-gray-600">
           🎓 Personal Mentorship <br />
           🚀 Internship Opportunities <br />
@@ -423,8 +423,8 @@ function App() {
       </div>
       <div className="bg-white p-8 rounded-lg shadow-lg text-center">
         <Trophy className="w-16 h-16 mx-auto mb-6 text-orange-500" />
+        <p className="text-3xl font-bold text-gray-700 mb-2">250$💰 WORTH</p>
         <h3 className="text-2xl font-bold mb-4">Third Prize</h3>
-        <p className="text-3xl font-bold text-blue-600 mb-2">250$💰 WORTH</p>
         <p className="text-gray-600">
           🎓 Personal Mentorship <br />
           🌍 Industry Connect
